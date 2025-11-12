@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Work Form - Subhadip Satpati</title>
+<style>
+  body {
+    font-family: "Times New Roman", serif;
+    background-color: #f5f5dc;
+    color: #000033;
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    width: 60%;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 2px solid #000033;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  th {
+    background: linear-gradient(to bottom, #d9d9ff, #f5f5ff);
+    color: #000033;
+    font-size: 1.5em;
+    padding: 15px;
+    border-bottom: 2px solid #000033;
+  }
+
+  td {
+    padding: 10px 15px;
+    border-bottom: 1px dashed #9999cc;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 98%;
+    padding: 8px;
+    border: 1px solid #6666aa;
+    border-radius: 4px;
+    font-family: "Times New Roman", serif;
+    font-size: 1em;
+    background-color: #fafafa;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  .captcha-box {
+    text-align: center;
+    background-color: #f0f0ff;
+    padding: 10px;
+    border: 1px solid #6666aa;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+  }
+
+  .button-box {
+    text-align: center;
+    padding: 15px;
+  }
+
+  input[type="submit"] {
+    background-color: #000033;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #ffcc00;
+    color: #000033;
+    font-weight: bold;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #000033;
+    padding: 15px;
+  }
+
+  @media (max-width: 768px) {
+    table { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+  <form action="https://formspree.io/f/xjkjkbyb" method="POST">
+    <table>
+      <tr>
+        <th colspan="2">📝 Client Work Application Form</th>
+      </tr>
+
+      <tr>
+        <td><label for="name">Client Name:</label></td>
+        <td><input type="text" id="name" name="Client Name" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="phone">Phone Number:</label></td>
+        <td><input type="tel" id="phone" name="Phone Number" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="address">Address:</label></td>
+        <td><input type="text" id="address" name="Address" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="Email" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="apply">Apply For:</label></td>
+        <td>
+          <select id="apply" name="Apply For" required>
+            <option value="">-- Select --</option>
+            <option>Website Design</option>
+            <option>DTP / Printing Work</option>
+            <option>Presentation (PPT)</option>
+            <option>Video / Poster Design</option>
+            <option>Freelance / Team Project</option>
+            <option>Other Services</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="message">Message:</label></td>
+        <td><textarea id="message" name="Message" required></textarea></td>
+      </tr>
+
+      <tr>
+        <td><label>Captcha:</label></td>
+        <td>
+          <div class="captcha-box" id="captchaText"></div><br>
+          <input type="text" id="captchaInput" placeholder="Enter Captcha Here" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="button-box">
+          <input type="submit" value="Submit Application">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <footer>
+    © 2025 Subhadip Satpati | Classic Client Portal
+  </footer>
+
+  <script>
+    // Simple Classic Captcha
+    function generateCaptcha() {
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let captcha = "";
+      for (let i = 0; i < 6; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("captchaText").innerText = captcha;
+      return captcha;
+    }
+
+    let generatedCaptcha = generateCaptcha();
+
+    document.querySelector("form").addEventListener("submit", function(e) {
+      const input = document.getElementById("captchaInput").value.trim().toUpperCase();
+      if (input !== generatedCaptcha) {
+        alert("⚠️ Incorrect Captcha! Please try again.");
+        e.preventDefault();
+        generatedCaptcha = generateCaptcha();
+      }
+    });
+  </script>
+
+</body>
+</html>

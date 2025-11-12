@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhadip Satpati | Teach • Education • Business • Motivation</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== GLOBAL STYLES ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top, #f3f6ff, #dbe1f9);
+    color: #001233;
+    overflow-x: hidden;
+  }
+
+  header {
+    background: linear-gradient(135deg, #001233, #003366);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+    animation: rotate 12s linear infinite;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  header h1 {
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    z-index: 1;
+    position: relative;
+  }
+
+  header p {
+    font-size: 1.2em;
+    opacity: 0.85;
+    z-index: 1;
+    position: relative;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    background: rgba(0, 18, 51, 0.9);
+    text-align: center;
+    padding: 14px 0;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  nav a {
+    color: #ffdd55;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffcc00;
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  section h2 {
+    font-size: 2em;
+    color: #001233;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #001233, #ffcc00);
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+
+  section p {
+    font-size: 1.1em;
+    color: #222;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* ===== GLASS BOX STYLE ===== */
+  .glass-box {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(0,0,51,0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin: 30px auto;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .glass-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  }
+
+  /* ===== CLIENT SECTION ===== */
+  .client-box {
+    background: linear-gradient(145deg, #ffffff, #e8ebff);
+    border: 1px solid #ccd2f0;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .client-box:hover {
+    transform: translateY(-6px);
+  }
+
+  .client-box h3 {
+    color: #001233;
+    font-size: 1.5em;
+  }
+
+  .client-box p {
+    color: #333;
+    margin: 15px 0 25px;
+    font-size: 1.1em;
+  }
+
+  .client-box a {
+    background: linear-gradient(135deg, #001233, #004488);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .client-box a:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd633);
+    color: #001233;
+    box-shadow: 0 8px 25px rgba(255,204,0,0.4);
+  }
+
+  /* ===== CONTACT ===== */
+  #contact p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8;
+  }
+
+  #contact b {
+    color: #001233;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #001233;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95em;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+  }
+
+  footer b {
+    color: #ffcc00;
+  }
+
+  /* ===== SCROLL ANIMATION ===== */
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+  }
+
+  [data-animate].active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Subhadip Satpati</h1>
+    <p>Teach • Education • Business • Motivation</p>
+  </header>
+
+  <nav>
+    <a href="#teach">Teach</a>
+    <a href="#education">Education</a>
+    <a href="#business">Business</a>
+    <a href="#motivation">Motivation</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="teach" data-animate>
+    <h2>Teach</h2>
+    <div class="glass-box">
+      <p>
+        Teaching is not just about lessons, it’s about connecting minds.  
+        My focus is on delivering practical, concept-based education that inspires growth and creativity.
+      </p>
+    </div>
+  </section>
+
+  <section id="education" data-animate>
+    <h2>Education</h2>
+    <div class="glass-box">
+      <p>
+        Education builds the foundation of your future.  
+        Through my initiatives, I aim to make learning engaging, interactive, and meaningful for every student.
+      </p>
+    </div>
+  </section>
+
+  <section id="business" data-animate>
+    <h2>Business</h2>
+    <div class="glass-box">
+      <p>
+        I believe knowledge should lead to opportunities.  
+        With business-oriented learning, I help students understand freelancing, branding, and digital entrepreneurship.
+      </p>
+    </div>
+  </section>
+
+  <section id="motivation" data-animate>
+    <h2>Motivation</h2>
+    <div class="glass-box">
+      <p>
+        Every success story begins with self-belief.  
+        I share motivational thoughts and guidance to keep you positive, focused, and goal-driven.
+      </p>
+    </div>
+  </section>
+
+  <section id="clients" data-animate>
+    <h2>Client Work</h2>
+    <div class="client-box">
+      <h3>Join Our Creative Team</h3>
+      <p>
+        We design websites, DTP works, presentations, and content materials for clients.  
+        If you want to work with us or hire us for your project — click below.
+      </p>
+      <a href="hire.html">Apply / Hire Now</a>
+    </div>
+  </section>
+
+  <section id="contact" data-animate>
+    <h2>Contact</h2>
+    <p>
+      📧 <b>Email:</b> satpatiwebdevloper@zohomail.in<br>
+      📱 <b>Phone:</b> <br>
+      📍 <b>Location:</b> West Bengal, India
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Subhadip Satpati | <b>Made in India ❤️</b>
+  </footer>
+
+  <script>
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("active");
+      });
+    });
+
+    document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
