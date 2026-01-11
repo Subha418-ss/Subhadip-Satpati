@@ -1,312 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subhadip Satpati | Teach • Education • Business • Motivation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBHADIP CYBER TECHNOLOGY | Professional IT & Design</title>
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/8v5m0fw9z/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png?updatedAt=1767436479923">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        
+        .service-card { border: 1px solid #e5e7eb; transition: all 0.3s ease; height: 100%; }
+        .service-card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.05); }
+        
+        .coming-soon-card { background-color: #f9fafb; border: 1px dashed #d1d5db; opacity: 0.8; }
+        .badge-soon { background-color: #eff6ff; color: #2563eb; font-size: 0.65rem; font-weight: 700; padding: 2px 10px; border-radius: 99px; text-transform: uppercase; border: 1px solid #dbeafe; }
+        
+        .client-logo { filter: grayscale(100%); opacity: 0.6; transition: 0.3s; height: 50px; width: auto; object-fit: contain; }
+        .client-logo:hover { filter: grayscale(0%); opacity: 1; }
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-/* ===== GLOBAL ===== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:"Poppins",sans-serif;
-  background:radial-gradient(circle at top,#f3f6ff,#dbe1f9);
-  color:#001233;
-  overflow-x:hidden;
-}
-
-/* ===== HEADER ===== */
-header{
-  background:linear-gradient(135deg,#001233,#003366);
-  color:#fff;
-  text-align:center;
-  padding:80px 20px;
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-header::after{
-  content:"";
-  position:absolute;
-  inset:-50%;
-  background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%);
-  animation:rotate 12s linear infinite;
-}
-
-@keyframes rotate{
-  to{transform:rotate(360deg);}
-}
-
-header h1{
-  font-size:2.8em;
-  position:relative;
-  z-index:1;
-}
-
-header p{
-  font-size:1.2em;
-  opacity:.85;
-  position:relative;
-  z-index:1;
-}
-
-/* ===== NAV ===== */
-nav{
-  background:rgba(0,18,51,.9);
-  text-align:center;
-  padding:14px 0;
-  backdrop-filter:blur(8px);
-  position:sticky;
-  top:0;
-  z-index:99;
-  box-shadow:0 4px 20px rgba(0,0,0,.2);
-}
-
-nav a{
-  color:#ffdd55;
-  text-decoration:none;
-  font-weight:600;
-  margin:0 15px;
-  transition:.3s;
-}
-
-nav a:hover{
-  color:#fff;
-  text-shadow:0 0 10px #ffcc00;
-}
-
-/* ===== SECTIONS ===== */
-section{
-  padding:60px 20px;
-  max-width:1000px;
-  margin:auto;
-}
-
-section h2{
-  text-align:center;
-  font-size:2em;
-  margin-bottom:20px;
-}
-
-section h2::after{
-  content:"";
-  display:block;
-  width:80px;
-  height:4px;
-  background:linear-gradient(90deg,#001233,#ffcc00);
-  margin:10px auto;
-  border-radius:2px;
-}
-
-/* ===== GLASS BOX ===== */
-.glass-box{
-  background:rgba(255,255,255,.75);
-  border-radius:16px;
-  padding:30px;
-  margin:30px auto;
-  box-shadow:0 10px 40px rgba(0,0,0,.1);
-  backdrop-filter:blur(10px);
-  transition:.4s;
-}
-
-.glass-box:hover{
-  transform:translateY(-8px) scale(1.02);
-}
-
-/* ===== CLIENT ===== */
-.client-box{
-  background:linear-gradient(145deg,#fff,#e8ebff);
-  padding:40px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 15px 30px rgba(0,0,0,.1);
-}
-
-.client-box a{
-  display:inline-block;
-  margin-top:20px;
-  background:linear-gradient(135deg,#001233,#004488);
-  color:#fff;
-  padding:12px 30px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.client-box a:hover{
-  background:linear-gradient(135deg,#ffcc00,#ffd633);
-  color:#001233;
-}
-
-/* ===== WRITING SECTION (NEW) ===== */
-.writing-box{
-  background:linear-gradient(145deg,#ffffff,#eef1ff);
-  border-radius:20px;
-  padding:30px;
-  max-width:420px;
-  margin:0 auto;
-  text-align:center;
-  box-shadow:0 15px 40px rgba(0,0,0,.2);
-  transition:.4s;
-}
-
-.writing-box:hover{
-  transform:translateY(-10px);
-}
-
-.writing-box img{
-  width:100%;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,.3);
-}
-
-.writing-box h3{
-  margin-top:18px;
-  font-size:1.4em;
-}
-
-.writing-box p{
-  margin-top:10px;
-  font-size:1.05em;
-  color:#333;
-}
-
-/* ===== CONTACT ===== */
-#contact p{
-  text-align:center;
-  font-size:1.1em;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  background:#001233;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-
-footer b{
-  color:#ffcc00;
-}
-
-/* ===== SCROLL ANIMATION ===== */
-[data-animate]{
-  opacity:0;
-  transform:translateY(40px);
-  transition:.8s;
-}
-
-[data-animate].active{
-  opacity:1;
-  transform:none;
-}
-</style>
+        .founder-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        
+        /* Certificate Zoom Effect */
+        .cert-frame { transition: all 0.4s ease; cursor: zoom-in; border: 8px solid rgba(255,255,255,0.1); }
+        .cert-frame:hover { transform: scale(1.02); border-color: #2563eb; }
+    </style>
 </head>
+<body class="antialiased">
 
-<body>
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://ik.imagekit.io/8v5m0fw9z/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png?updatedAt=1767436479923" alt="Logo" class="w-10 h-10 object-cover rounded shadow-sm">
+                <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">SUBHADIP CYBER<span class="text-blue-600"> TECHNOLOGY</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#founder" class="hover:text-blue-600 transition">Founder</a>
+                <a href="#enquiry" class="px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition shadow-md shadow-blue-100">Enquire Now</a>
+            </div>
+        </div>
+    </nav>
 
-<header>
-  <h1>Subhadip Satpati</h1>
-  <p>Teach • Education • Business • Motivation</p>
-</header>
+    <header class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <span class="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Innovation Excellence Precision</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                High-End Technical Solutions & <br>Corporate Design Laboratory
+            </h1>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Empowering brands with enterprise-grade web architecture, professional desktop publishing, and high-impact presentations.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="bg-slate-900 text-white px-8 py-3 rounded-md font-medium hover:bg-slate-800 transition">View Our Portfolio</a>
+                <a href="#services" class="bg-white border border-gray-200 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition">Explore Services</a>
+            </div>
+        </div>
+    </header>
 
-<nav>
-  <a href="#teach">Teach</a>
-  <a href="#education">Education</a>
-  <a href="#business">Business</a>
-  <a href="#motivation">Motivation</a>
-  <a href="#writing">Writing</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <div class="py-20 border-t border-b border-gray-50 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-12">Our Trusted Clients</h2>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+                <img src="https://deliberate-amber-gfvdqe4djb.edgeone.app/logo.jpg" alt="Client 1" class="client-logo">
+                <img src="https://ik.imagekit.io/8v5m0fw9z/Blue_and_Green_Modern_Education_Center_Badge_Logo-removebg-preview.png" alt="Client 2" class="client-logo">
+                <img src="https://ik.imagekit.io/8v5m0fw9z/INDRA.jpg" alt="Client 3" class="client-logo">
+                <img src="https://ik.imagekit.io/8v5m0fw9z/Blue%20and%20White%20Modern%20Coming%20Soon%20Email%20Header.png?updatedAt=1767694671590" alt="Client 4" class="client-logo">
+                <img src="https://ik.imagekit.io/8v5m0fw9z/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png?updatedAt=1767436479923" alt="Client 5" class="client-logo">
+            </div>
+        </div>
+    </div>
 
-<section id="teach" data-animate>
-  <h2>Teach</h2>
-  <div class="glass-box">
-    Teaching is not just about lessons, it’s about connecting minds. My focus is on delivering practical, concept-based education that inspires growth and creativity.
-  </div>
-</section>
+    <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Our Expertise</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+        </div>
 
-<section id="education" data-animate>
-  <h2>Education</h2>
-  <div class="glass-box">
-    Education builds the foundation for a successful future.
-  </div>
-</section>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="service-card p-8 bg-white rounded-xl">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Web Solutions</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Full-cycle development from landing pages to complex enterprise portals with SEO focus.</p>
+            </div>
+            <div class="service-card p-8 bg-white rounded-xl">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">PPT Presentation</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Strategic slide deck design for business proposals, training, and investor relations.</p>
+            </div>
+            <div class="service-card p-8 bg-white rounded-xl">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">DTP Services</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">High-precision Desktop Publishing for print media, e-books, and technical documentation.</p>
+            </div>
+        </div>
 
-<section id="business" data-animate>
-  <h2>Business</h2>
-  <div class="glass-box">
-    Knowledge should create real-world opportunities.
-  </div>
-</section>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="coming-soon-card p-8 rounded-xl flex items-start justify-between">
+                <div>
+                    <span class="badge-soon mb-3 inline-block">Expanding Q3 2026</span>
+                    <h3 class="text-xl font-bold mb-2 text-slate-700">Mobile App Lab</h3>
+                    <p class="text-gray-400 text-sm">Native and Hybrid mobile applications for modern smartphone ecosystems.</p>
+                </div>
+                <div class="text-gray-300"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div>
+            </div>
+            <div class="coming-soon-card p-8 rounded-xl flex items-start justify-between">
+                <div>
+                    <span class="badge-soon mb-3 inline-block">Expanding Q4 2026</span>
+                    <h3 class="text-xl font-bold mb-2 text-slate-700">Cyber Security</h3>
+                    <p class="text-gray-400 text-sm">Advanced threat protection, security audits, and infrastructure hardening.</p>
+                </div>
+                <div class="text-gray-300"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+            </div>
+        </div>
+    </section>
 
-<section id="motivation" data-animate>
-  <h2>Motivation</h2>
-  <div class="glass-box">
-    Every success begins with belief and discipline.
-  </div>
-</section>
+    <section id="projects" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200">
+                    <img src="https://ik.imagekit.io/8v5m0fw9z/Blue%20and%20Green%20Modern%20Education%20Center%20Badge%20Logo.png?updatedAt=1766934660173" alt="Project 1" class="w-full h-56 object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="p-6">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">Web Dev</span>
+                        <h4 class="font-bold text-lg mt-1 uppercase">Geoid Study Centre</h4>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200">
+                    <img src="https://ik.imagekit.io/8v5m0fw9z/preview.jpg?updatedAt=1766987392193" alt="Project 2" class="w-full h-56 object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="p-6">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">DTP</span>
+                        <h4 class="font-bold text-lg mt-1 uppercase">Developer Hand Book</h4>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl bg-white border border-gray-200">
+                    <img src="https://ik.imagekit.io/8v5m0fw9z/PPP.jpg" alt="Project 3" class="w-full h-56 object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="p-6">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">Presentation</span>
+                        <h4 class="font-bold text-lg mt-1 uppercase">Environmental Impact</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ===== WRITING PREVIEW ===== -->
-<section id="writing" data-animate>
-  <h2>My Writing & Work</h2>
+    <section id="founder" class="founder-gradient py-24 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-64 h-64 md:w-80 md:h-80 flex-shrink-0 relative">
+                    <img src="https://ik.imagekit.io/8v5m0fw9z/SUBHADIP--LOGO.jpeg" alt="Founder" class="w-full h-full object-cover rounded-2xl shadow-2xl z-10 relative border-4 border-slate-700">
+                    <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-blue-500 rounded-2xl"></div>
+                </div>
 
-  <div class="writing-box">
-    <a href="https://drive.google.com/file/d/1VEs6cc4prackqFPJxnCMu1Nrfg1omkmk/view?usp=sharing" target="_blank">
-      <img src="https://ik.imagekit.io/hywzwogxt/Halloween%20Horror%20Book%20Cover%20in%20Black%20Orange%20Illustrative%20Style%20(1).jpg" alt="13 Number Rahasyamoy Banglo">
-    </a>
-    <h3>১৩ নম্বর রহস্যময় বাংলো</h3>
-    <p>
-      A chilling horror mystery based on fear, secrets and the unknown.  
-      Click the cover to read the full story.
-      <a href="">See More.➡️</a>
-    </p>
-  </div>
-</section>
+                <div class="flex-1 text-center lg:text-left">
+                    <h2 class="text-3xl font-bold mb-4">Meet the Founder</h2>
+                    <p class="text-blue-400 font-medium mb-6 uppercase tracking-widest text-sm">Visionary. Architect. Innovator.</p>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                        "At SUBHADIP CYBER TECHNOLOGY, we believe that technology should be as elegant as it is powerful. Our mission is to transform the technical landscape for businesses by providing infrastructure that is reliable and visually superior."
+                    </p>
+                    <div class="mb-8">
+                        <p class="text-2xl font-bold uppercase">SUBHADIP SATPATI</p>
+                        <p class="text-slate-500 text-sm mt-1 uppercase">B.S.C Computer Science Student<br>Midnapore College (Autonomous)</p>
+                    </div>
+                </div>
 
-<section id="clients" data-animate>
-  <h2>Client Work</h2>
-  <div class="client-box">
-    Websites • DTP • Presentations • Creative Content  
-    <br><br>
-    <a href="hire.html">Apply / Hire Now</a>
-  </div>
-</section>
+                <div class="lg:w-1/3 w-full">
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm">
+                        <h3 class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Verified Credentials
+                        </h3>
+                        <div class="cert-frame bg-white rounded shadow-2xl overflow-hidden">
+                            <img src="https://ik.imagekit.io/8v5m0fw9z/My_Bharat_Certificate%20(2).png?updatedAt=1766545193138" alt="Professional Certificate" class="w-full h-auto">
+                        </div>
+                        <p class="text-slate-400 text-xs mt-4 italic text-center">Certified By My Bharat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact" data-animate>
-  <h2>Contact</h2>
-  <p>
-    📧 satpatiwebdevloper@zohomail.in <br>
-    📍 West Bengal, India
-  </p>
-</section>
+    <section id="enquiry" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Contact Our Lab</h2>
+                <p class="text-gray-500">Fill out the form below to discuss your project requirements.</p>
+            </div>
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Name</label>
+                        <input type="text" class="w-full px-4 py-3 bg-slate-50 border border-gray-100 rounded focus:border-blue-500 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 bg-slate-50 border border-gray-100 rounded focus:border-blue-500 focus:outline-none transition">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Inquiry Type</label>
+                    <select class="w-full px-4 py-3 bg-slate-50 border border-gray-100 rounded focus:border-blue-500 focus:outline-none transition">
+                        <option>Web Development</option>
+                        <option>Presentation Design</option>
+                        <option>Desktop Publishing</option>
+                        <option>General Inquiry</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Message</label>
+                    <textarea rows="4" class="w-full px-4 py-3 bg-slate-50 border border-gray-100 rounded focus:border-blue-500 focus:outline-none transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded hover:bg-blue-700 transition">Submit Request</button>
+            </form>
+        </div>
+    </section>
 
-<footer>
-  © 2025 Subhadip Satpati | <b>Made in India ❤️</b>
-</footer>
-
-<script>
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add("active");
-  });
-});
-document.querySelectorAll("[data-animate]").forEach(el=>observer.observe(el));
-</script>
+    <footer class="bg-white border-t border-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <img src="https://ik.imagekit.io/8v5m0fw9z/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png?updatedAt=1767436479923" alt="Logo" class="w-6 h-6 rounded">
+                    <span class="text-lg font-bold uppercase tracking-tight">SUBHADIP CYBER<span class="text-blue-600"> TECHNOLOGY</span></span>
+                </div>
+                <div class="flex gap-8 text-sm text-gray-500">
+                    <a href="#services" class="hover:text-blue-600">Services</a>
+                    <a href="#projects" class="hover:text-blue-600">Portfolio</a>
+                    <a href="#founder" class="hover:text-blue-600">About</a>
+                </div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-widest">
+                    © 2026 Subhadip Cyber Technology. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
-
-
-
-
