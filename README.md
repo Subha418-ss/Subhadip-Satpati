@@ -1,2 +1,2 @@
-# Subhadip-Satpati
-Educational Website
+Subhadip Cyber Technology
+Portfolio Website
